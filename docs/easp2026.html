@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-eb3626f408cec11013137802264cf11e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.3">
+
+  <meta name="author" content="Dr.&nbsp;Rizqy Amelia Zein (Center for Advanced Internet Studies &amp; Universitas Airlangga)">
+  <meta name="author" content="Mario Gollwitzer (Ludwig-Maximilian-Universität München)">
+  <title>EASP 2026 – The Role of Context in Explaining Effect Size Heterogeneity in Replication Studies</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-d0f2b35fb607b390c7f2640eb0823fb1.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="center">
+  <!-- Linke weiße Spalte: Logos, Veranstaltungsinfos -->
+  <div class="cais-title-left">
+
+    <div class="cais-logos">
+      <img src="img/Transparent.png" alt="CAIS – Research for the Digital Age" class="cais-logo-img">
+    </div>
+
+    <div class="cais-title-meta">
+      <p class="cais-event">Symposium “Who Critiques the Critique? Toward a Reflexive Metascience” · EASP 2026, Strasbourg</p>
+      <p class="cais-author">Dr.&nbsp;Rizqy Amelia Zein (Center for Advanced Internet Studies &amp; Universitas Airlangga)</p>
+      <p class="cais-author">Mario Gollwitzer (Ludwig-Maximilian-Universität München)</p>
+    </div>
+
+  </div>
+  <!-- Rechte Spalte: Präsentationstitel auf CAIS-Blau Muster-Hintergrund -->
+  <div class="cais-title-right">
+    <h1 class="title">The Role of Context in Explaining Effect Size Heterogeneity in Replication Studies</h1>
+  </div>
+</section>
+<section id="agenda" class="slide level2 agenda-slide">
+<h2>AGENDA</h2>
+<!-- Klasse: .agenda-slide -->
+<ol type="1">
+<li>Empirical, Evidence-Based Metascience</li>
+<li>Context Characteristics</li>
+<li>Testing the Role of Contextual Variation</li>
+<li>Conclusion &amp; Limitations</li>
+</ol>
+</section>
+<section id="section" class="slide level2 section-slide">
+<h2></h2>
+<!-- Zwischentitelfolie 01 -->
+<div class="section-number">
+<p>01</p>
+</div>
+<div class="section-bubble">
+<p>Empirical (i.e., Evidence-Based) Metascience</p>
+</div>
+</section>
+<section id="empirical-i.e.-evidence-based-metascience" class="slide level2">
+<h2>Empirical (i.e., Evidence-Based) Metascience</h2>
+<!-- general symptom -> cause -> treatment -> effect/side-effect model -->
+<p><img data-src="img/easp/diagram_evidence_loop.png" style="width:100.0%"></p>
+</section>
+<section id="empirical-i.e.-evidence-based-metascience-1" class="slide level2">
+<h2>Empirical (i.e., Evidence-Based) Metascience</h2>
+<!-- applied to questionable research practices -->
+<p><img data-src="img/easp/diagram_qrp_example.png" style="width:74.0%"></p>
+</section>
+<section id="empirical-i.e.-evidence-based-metascience-2" class="slide level2 smaller">
+<h2>Empirical (i.e., Evidence-Based) Metascience</h2>
+<div class="lead">
+<p>Empirical metascience shows that…</p>
+</div>
+<div class="columns">
+<div class="column" style="width:58%;">
+<ul>
+<li class="fragment">questionable research practices can only explain a small part of non-replicability (e.g., Ulrich &amp; Miller, 2020; Wegener, Pek, &amp; Fabrigar, 2024)</li>
+<li class="fragment">making ad-hoc changes to self-report scales (e.g., excluding items, changing wording, changing response format etc.) has only a small impact on the replicability of the focal finding (Böhm &amp; Wetzel, forthcoming)</li>
+<li class="fragment">many pre-registrations are of low quality (Hahn et al., in press) and deviations from the pre-registered analysis plan is the rule (rather than the exception; see Van den Akker et al., 2024)</li>
+<li class="fragment">more and more datasets are now publicly accessible on repositories, but only a tiny fraction of data is actually re-usable (see Crüwell et al., 2023; Hardwicke et al., 2021), which explains why data are not really re-used (see Blask et al., 2021; Tenopir et al., 2020)</li>
+</ul>
+</div><div class="column" style="width:42%;">
+<p><img data-src="img/easp/diagram_assumptions_brace.png" style="width:75.0%"></p>
+<p><span class="text-small">Points 1–2 challenge assumptions about causes; points 3–4 challenge assumptions about effects.</span></p>
+</div></div>
+</section>
+<section id="data-peeking-and-replication-rate" class="slide level2">
+<h2>Data Peeking and Replication Rate</h2>
+<p><img data-src="img/easp/ulrich_miller_simulation.jpg" style="width:78.0%"></p>
+<p><span class="text-small"><em>from Ulrich &amp; Miller (2020):</em> influence of data peeking (i.e., checking whether a finding is significant after sampling 10 additional participants) on Replication Rate (RR; the relative frequency of obtaining a significant finding in a replication if the original finding had been significant at α = 5% / 0.5%) depending on the max. no. of data peeks (<em>k</em>), population effect size (<em>d</em>), and the base rate of H1 being true (π). Simulation result: the influence of data peeking on RR is negligible in comparison to π and <em>d</em>.</span></p>
+</section>
+<section id="empirical-i.e.-evidence-based-metascience-3" class="slide level2">
+<h2>Empirical (i.e., Evidence-Based) Metascience</h2>
+<!-- pivot: context dependency as a second, competing cause -->
+<p><img data-src="img/easp/diagram_dual_loop.png" style="width:100.0%"></p>
+</section>
+<section id="section-1" class="slide level2 section-slide">
+<h2></h2>
+<!-- Zwischentitelfolie 02 -->
+<div class="section-number">
+<p>02</p>
+</div>
+<div class="section-bubble">
+<p>Context Characteristics</p>
+</div>
+</section>
+<section id="context-characteristics-the-manylabs-1-example" class="slide level2">
+<h2>Context Characteristics: the ManyLabs 1 Example</h2>
+<p><img data-src="img/easp/manylabs1_anchoring.png" style="width:72.0%"></p>
+<p><span class="text-small"><em>ManyLabs 1 Project (Klein et al., 2014)</em></span></p>
+</section>
+<section id="context-characteristics" class="slide level2 smaller">
+<h2>Context Characteristics</h2>
+<div class="lead">
+<p>The “FACE” framework: which sample characteristics moderate replication of classic effects?</p>
+</div>
+<p><img data-src="img/easp/face_framework_diagram.jpg" style="width:85.0%"></p>
+<ul>
+<li><strong>Panels:</strong> 11 samples (e.g., ad-hoc student sample; MTurkers, Prolific workers, etc.)</li>
+<li><strong>FACE moderators:</strong> Fluid Intelligence (e.g., numeracy), Attentiveness, Crystallized Intelligence (e.g., knowledge, life experience), Experience with online surveys</li>
+<li><strong>Effects tested:</strong> four famous effects in econ/social psych — default (opt-out/in), framing, less-is-better, sunk costs</li>
+</ul>
+<p><span class="text-small"><em>from Krefeld-Schwalb et al.&nbsp;(2024)</em></span></p>
+</section>
+<section id="context-characteristics-1" class="slide level2">
+<h2>Context Characteristics</h2>
+<p><img data-src="img/easp/face_effect_forest.jpg" style="width:92.0%"></p>
+<p><span class="text-small"><em>from Krefeld-Schwalb et al.&nbsp;(2024)</em></span></p>
+</section>
+<section id="context-characteristics-2" class="slide level2">
+<h2>Context Characteristics</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="img/easp/face_radar_panels.jpg" style="width:100.0%"></p>
+</div><div class="column" style="width:50%;">
+<p>Samples vary considerably with regard to the “FACE” parameters:</p>
+<p><strong>MTurkers are …</strong></p>
+<ul>
+<li>Low in Attentiveness</li>
+<li>High in Crystallized Intelligence</li>
+<li>High in Experience</li>
+</ul>
+<p><strong>Students are …</strong></p>
+<ul>
+<li>High in Attentiveness</li>
+<li>Low in Crystallized Intelligence</li>
+<li>Low in Experience</li>
+</ul>
+<p><span class="text-small"><em>from Krefeld-Schwalb et al.&nbsp;(2024)</em></span></p>
+</div></div>
+</section>
+<section id="context-characteristics-3" class="slide level2">
+<h2>Context Characteristics</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><img data-src="img/easp/face_radar_panels_indicators.jpg" style="width:100.0%"></p>
+</div><div class="column" style="width:45%;">
+<p>Each radar axis indexes one FACE moderator:</p>
+<ul>
+<li>Indicators of Fluid Intelligence</li>
+<li>Indicators of Attentiveness</li>
+<li>Indicators of Crystallized Intelligence</li>
+<li>Indicators of Experience</li>
+</ul>
+<p><span class="text-small"><em>from Krefeld-Schwalb et al.&nbsp;(2024)</em></span></p>
+</div></div>
+</section>
+<section id="conceptually-relevant-vs.-irrelevant-context" class="slide level2 smaller">
+<h2>Conceptually Relevant vs.&nbsp;Irrelevant Context</h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img data-src="img/easp/diagram_moderation_path.png" style="width:100.0%"></p>
+</div><div class="column" style="width:42%;">
+<ul>
+<li><strong>a</strong> → observed effect heterogeneity</li>
+<li><strong>b</strong> → differences in construct validity of X between contexts</li>
+<li><strong>c</strong> → conceptually relevant moderators associated w/context</li>
+<li><strong>d</strong> → differences in construct validity of Y between contexts</li>
+<li><strong>e</strong> → context-dependent (un)reliability</li>
+</ul>
+<p><span class="text-small"><em>from Gollwitzer &amp; Schwabe (2022)</em></span></p>
+</div></div>
+</section>
+<section id="section-2" class="slide level2 section-slide">
+<h2></h2>
+<!-- Zwischentitelfolie 03 -->
+<div class="section-number">
+<p>03</p>
+</div>
+<div class="section-bubble">
+<p>Testing the Role of Contextual Variation</p>
+</div>
+</section>
+<section id="testing-the-role-of-contextual-variation" class="slide level2 smaller">
+<h2>Testing the role of contextual variation</h2>
+<div class="lead">
+<p>Examined the role of “conceptually relevant” and “conceptually irrelevant” contextual variables (Gollwitzer &amp; Schwabe, 2022) by reanalyzing data from past multi-lab replications.</p>
+</div>
+<ul>
+<li>We searched the FORRT Replication Database (FReD) through 17.12.2025 and reviewed ongoing Psychological Science Accelerator (PSA) projects.</li>
+<li>384 effect sizes were coded across 44 multi-site replication projects.</li>
+<li>We applied four inclusion criteria:
+<ol type="1">
+<li>To calculate <strong>path <em>b</em></strong>, a manipulation check should be used in the study.</li>
+<li>To estimate <strong>path <em>d</em></strong> and <strong><em>e</em></strong>, the outcome variable should be measured by a multi-item self-report scale (≥ 3 items), allowing differential item functioning (DIF) analysis and marginal reliability estimation.</li>
+<li>Item-level data must be publicly available.</li>
+<li>A comparison single-lab study (the original, or a pre-registered single-site replication) must be available as the reference group for DIF analysis.</li>
+</ol></li>
+<li>Only one effect, Shnabel &amp; Nadler (2008), Study 4, fulfilled all of these criteria.</li>
+</ul>
+</section>
+<section id="reanalysis-of-shnabel-nadler-2008-study-4-data" class="slide level2 smaller">
+<h2>Reanalysis of Shnabel &amp; Nadler (2008), Study 4 data</h2>
+<blockquote>
+<p>Victims are more likely to reconcile if they feel empowered, while perpetrators are more likely to do so if they feel accepted.</p>
+</blockquote>
+<ul>
+<li>We decomposed the interaction effect into two contrasts: effects for <strong>victims</strong> and effects for <strong>perpetrators</strong>.</li>
+<li>We used RP:P data as a reference, and ML5 (<em>k</em> = 8, all US samples) as test data.</li>
+<li>To estimate the heterogeneity of victims’ and perpetrators’ effects, we performed meta-regressions, where:
+<ul>
+<li><strong>b</strong> = absolute differences of manipulation effectiveness (b1: role, b2: message)</li>
+<li><strong>c</strong> = protocol type (ML5 participants were randomly assigned to either the same vignette used in the original study and RP:P — the “original” protocol — or a “modified” vignette)</li>
+<li><strong>d</strong> = expected test score standardized differences (ETSSD; Meade &amp; Wright, 2012)</li>
+<li><strong>e</strong> = absolute differences of marginal reliability (ρ)</li>
+</ul></li>
+<li><strong>ML5 finding:</strong> the focal interaction effect was significant only among participants who were given the modified vignette (Baranski et al., 2020).</li>
+</ul>
+</section>
+<section id="results-victims-effect" class="slide level2 smaller">
+<h2>Results: Victims effect</h2>
+<p><img data-src="img/easp/forest_victims.png" style="width:58.0%"></p>
+<ul>
+<li>Heterogeneity was low (τ² = 0.0025, I² = 5.15%).</li>
+<li>Conceptually-relevant (protocol types) and conceptually-irrelevant context (b, d, and e) failed to explain heterogeneity.</li>
+<li><strong>Regardless of any contextual variables, we failed to detect the victims effect.</strong></li>
+</ul>
+</section>
+<section id="results-perpetrators-effect" class="slide level2 smaller">
+<h2>Results: Perpetrators effect</h2>
+<p><img data-src="img/easp/forest_perpetrators.png" style="width:46.0%"></p>
+<ul>
+<li>Heterogeneity was moderate (τ² = 0.0162, I² = 25.67%).</li>
+<li>Only protocol type was significant and explained the entire heterogeneity in the model.</li>
+<li>ML5 samples using the “original” protocol yielded more heterogeneous ES, while ES from the “modified” protocol were consistently positive.</li>
+<li><strong>The perpetrator effect was small and positive only among participants given the modified protocol.</strong></li>
+</ul>
+</section>
+<section id="conclusion-limitations" class="slide level2 text-slide-bg">
+<h2>Conclusion &amp; Limitations</h2>
+<div class="lead">
+<p>What effect size heterogeneity in many-labs replications can — and cannot — tell us</p>
+</div>
+<div class="content-box">
+<ul>
+<li><strong>Conceptually relevant</strong> context characteristics (nature of the transgression; type of relationship between victim and transgressor) explain effect heterogeneity in the effects found by Shnabel and Nadler (2008) ― these might have to be built into the theory (“Needs-Based Model”).</li>
+<li>The example shows: <strong>Context does matter!</strong></li>
+<li>Effect heterogeneity can be informative in many-labs replication studies ― especially if the effect to be replicated is (likely) a true positive (Fünderich, Beinhauer, &amp; Renkewitz, 2025).</li>
+<li>Context can be modeled in <strong>several different ways</strong> (e.g., Pohl et al., in press; PsychMethods). Replication studies can be designed to test context effects (Hoffmann et al., 2025; AMPPS).</li>
+<li>Our approach shows how meta-regression can be used to analyze how much heterogeneity is due to <strong>psychometric properties</strong> (i.e., conceptually irrelevant context characteristics).</li>
+<li>BUT: We need more test cases to find out how much they really matter.</li>
+</ul>
+</div>
+</section>
+<section id="section-3" class="slide level2 closing-slide no-footer">
+<h2></h2>
+<div class="closing-left">
+<div class="closing-contact-box">
+<p><strong>Dr.&nbsp;Rizqy Amelia Zein</strong> Center for Advanced Internet Studies (CAIS) &amp; Universitas Airlangga<br>
+amelia.zein@cais-research.de</p>
+<p><strong>Prof.&nbsp;Dr.&nbsp;Mario Gollwitzer</strong><br>
+LMU München, Department of Psychology<br>
+mario.gollwitzer@lmu.de · www.psy.lmu.de/soz</p>
+</div>
+<div class="closing-cais-logo">
+<p><img data-src="img/Transparent.png"></p>
+</div>
+</div>
+<div class="closing-right">
+<div class="closing-text">
+<p>Thank you!</p>
+</div>
+<div class="closing-bottom">
+<div class="closing-org">
+<p>Center for Advanced Internet Studies (CAIS) gGmbH</p>
+<p>Konrad-Zuse-Str. 2a, 44801 Bochum</p>
+</div>
+<div class="closing-contact-info">
+<p><a href="mailto:info@cais-research.de">info@cais-research.de</a><br>
++49 234 9531 5000<br>
+<a href="https://www.cais-research.de">www.cais-research.de</a></p>
+</div>
+<div class="closing-social">
+<p><a href="https://www.linkedin.com/company/cais-nrw" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a> <a href="https://x.com/cais_nrw" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a> <a href="https://www.instagram.com/cais_nrw" title="Instagram"><i class="fa-brands fa-instagram"></i></a> <a href="https://scholar.social/@cais" title="Mastodon"><i class="fa-brands fa-mastodon"></i></a> <a href="https://www.facebook.com/caisnrw" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a> <a href="https://www.youtube.com/@cais_nrw" title="YouTube"><i class="fa-brands fa-youtube"></i></a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="appendix-descriptive-statistics" class="slide level2">
+<h2>Appendix – Descriptive Statistics</h2>
+<p><img data-src="img/easp/table_descriptives.png" style="width:60.0%"></p>
+</section>
+<section id="appendix-model-parameters" class="slide level2">
+<h2>Appendix – Model Parameters</h2>
+<p><img data-src="img/easp/table_modelparams.png" style="width:58.0%"></p>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="img/Transparent.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>Context &amp; Effect Size Heterogeneity | Zein &amp; Gollwitzer | EASP 2026</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: false,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

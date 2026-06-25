@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(quarto render *)",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Amelia Zein\\\\OneDrive - Center for Advanced Internet Studies \\(CAIS\\) gGmbH\\\\cais-theme-quarto\\\\template.html\")",
+      "Bash(python3 -)",
+      "Bash(python3 -c ' *)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Bash(start \"\" \"http://localhost:4321/#/3\")"
+    ]
+  }
+}

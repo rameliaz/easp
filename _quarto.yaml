@@ -1,0 +1,55 @@
+project:
+  type: website
+  output-dir: docs
+  resources:
+    - img/
+  render:
+    - easp2026.qmd
+
+website:
+  title: "EASP 2026"
+  navbar:
+    left:
+      - href: https://rameliaz.github.io/
+        icon: house
+        text: "by Amelia Zein"
+      - icon: github
+        href: https://github.com/rameliaz
+    right:
+      - text: "Navbar1"
+        menu:
+          - text: "Präsentation"
+            href: template.html
+          - text: "EASP 2026"
+            href: easp2026.html
+      - icon: envelope
+        href: "mailto:amelia.zein@psikologi.unair.ac.id"
+      - icon: github
+        href: https://github.com/rameliaz
+      - icon: discord
+        href: https://discord.com/users/807046335613632555
+  search:
+    location: navbar
+    type: overlay
+  page-footer:
+      left: "&#169; 2026 Rizqy Amelia Zein"
+      center: |
+        <a class="link-dark me-1" href="https://github.com/rameliaz" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+        <a class="link-dark me-1" href="mailto:amelia.zein@psikologi.unair.ac.id" title="Email" target="_blank" rel="noopener"><i class="fa-solid fa-envelope"></i></a>
+        <a class="link-dark me-1" href="https://bsky.app/profile/ameliazein.bsky.social" title="Bluesky" target="_blank" rel="noopener"><i class="fa-brands fa-bluesky"></i></a>
+        <a class="link-dark me-1" href="https://discord.com/users/807046335613632555" title="Discord" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i></a>
+      right: |
+        <a class="link-dark me-1" href="https://github.com/rameliaz/mg-sem-workshop"><i class="fa-brands fa-github"></i> Source</a>
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    toc: true
+    toc-float: true
+    toc-depth: 3
+    df-print: paged
+    highlight-style: github
+    include-in-header:
+      - text: |
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
