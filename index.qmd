@@ -1,5 +1,0 @@
----
-title: "CAIS Präsentation"
----
-
-Here is the example of CAIS presentation.

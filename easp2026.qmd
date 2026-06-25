@@ -1,14 +1,15 @@
 ---
 title: "The Role of Context in Explaining Effect Size Heterogeneity in Replication Studies"
-event: "Symposium “Who Critiques the Critique? Toward a Reflexive Metascience” · EASP 2026, Strasbourg"
 author:
   - "Dr. Rizqy Amelia Zein (Center for Advanced Internet Studies & Universitas Airlangga)"
-  - "Mario Gollwitzer (Ludwig-Maximilian-Universität München)"
+  - "Prof. Dr. Mario Gollwitzer (Ludwig-Maximilian-Universität München)"
+event: "Symposium “Who Critiques the Critique? Toward a Reflexive Metascience” · EASP 2026, Strasbourg"
 format:
   cais-revealjs:
     logo: img/Transparent.png
     footer: "Context & Effect Size Heterogeneity | Zein & Gollwitzer | EASP 2026"
     auto-stretch: false
+    chalkboard: true
 ---
 
 ## AGENDA {.agenda-slide}
@@ -33,12 +34,12 @@ Empirical (i.e., Evidence-Based) Metascience
 ## Empirical (i.e., Evidence-Based) Metascience
 <!-- general symptom -> cause -> treatment -> effect/side-effect model -->
 
-![](img/easp/diagram_evidence_loop.png){width=100%}
+![](img/easp/diagram_evidence_loop.png){fig-align="center" width=100%}
 
 ## Empirical (i.e., Evidence-Based) Metascience
 <!-- applied to questionable research practices -->
 
-![](img/easp/diagram_qrp_example.png){width=74%}
+![](img/easp/diagram_qrp_example.png){fig-align="center" width=74%}
 
 ## Empirical (i.e., Evidence-Based) Metascience {.smaller}
 
@@ -47,17 +48,25 @@ Empirical metascience shows that…
 :::
 
 :::: {.columns}
-::: {.column width="58%"}
+::: {.column width="60%"}
 ::: {.incremental}
+
+<br>
+
+
 - questionable research practices can only explain a small part of non-replicability (e.g., Ulrich & Miller, 2020; Wegener, Pek, & Fabrigar, 2024)
 - making ad-hoc changes to self-report scales (e.g., excluding items, changing wording, changing response format etc.) has only a small impact on the replicability of the focal finding (Böhm & Wetzel, forthcoming)
+
+<br>
+<br>
+
 - many pre-registrations are of low quality (Hahn et al., in press) and deviations from the pre-registered analysis plan is the rule (rather than the exception; see Van den Akker et al., 2024)
 - more and more datasets are now publicly accessible on repositories, but only a tiny fraction of data is actually re-usable (see Crüwell et al., 2023; Hardwicke et al., 2021), which explains why data are not really re-used (see Blask et al., 2021; Tenopir et al., 2020)
 :::
 :::
 
-::: {.column width="42%"}
-![](img/easp/diagram_assumptions_brace.png){width=75%}
+::: {.column width="40%"}
+![](img/easp/diagram_assumptions_brace.png){width=50%}
 
 [Points 1–2 challenge assumptions about causes; points 3–4 challenge assumptions about effects.]{.text-small}
 :::
@@ -65,7 +74,7 @@ Empirical metascience shows that…
 
 ## Data Peeking and Replication Rate
 
-![](img/easp/ulrich_miller_simulation.jpg){width=78%}
+![](img/easp/ulrich_miller_simulation.jpg){fig-align="center" width=48%}
 
 [*from Ulrich & Miller (2020):* influence of data peeking (i.e., checking whether a finding is significant after sampling 10 additional participants) on Replication Rate (RR; the relative frequency of obtaining a significant finding in a replication if the original finding had been significant at α = 5% / 0.5%) depending on the max. no. of data peeks (*k*), population effect size (*d*), and the base rate of H1 being true (π). Simulation result: the influence of data peeking on RR is negligible in comparison to π and *d*.]{.text-small}
 
@@ -87,7 +96,7 @@ Context Characteristics
 
 ## Context Characteristics: the ManyLabs 1 Example
 
-![](img/easp/manylabs1_anchoring.png){width=72%}
+![](img/easp/manylabs1_anchoring.png){fig-align="center" width=72%}
 
 [*ManyLabs 1 Project (Klein et al., 2014)*]{.text-small}
 
@@ -97,7 +106,8 @@ Context Characteristics
 The “FACE” framework: which sample characteristics moderate replication of classic effects?
 :::
 
-![](img/easp/face_framework_diagram.jpg){width=85%}
+
+![](img/easp/face_framework_diagram.jpg){fig-align="center" width=85%}
 
 - **Panels:** 11 samples (e.g., ad-hoc student sample; MTurkers, Prolific workers, etc.)
 - **FACE moderators:** Fluid Intelligence (e.g., numeracy), Attentiveness, Crystallized Intelligence (e.g., knowledge, life experience), Experience with online surveys
@@ -107,7 +117,7 @@ The “FACE” framework: which sample characteristics moderate replication of c
 
 ## Context Characteristics
 
-![](img/easp/face_effect_forest.jpg){width=92%}
+![](img/easp/face_effect_forest.jpg){fig-align="center" width=80%}
 
 [*from Krefeld-Schwalb et al. (2024)*]{.text-small}
 
@@ -115,7 +125,7 @@ The “FACE” framework: which sample characteristics moderate replication of c
 
 :::: {.columns}
 ::: {.column width="50%"}
-![](img/easp/face_radar_panels.jpg){width=100%}
+![](img/easp/face_radar_panels.jpg){fig-align="center" width=100%}
 :::
 
 ::: {.column width="50%"}
@@ -158,12 +168,8 @@ Each radar axis indexes one FACE moderator:
 
 ## Conceptually Relevant vs. Irrelevant Context {.smaller}
 
-:::: {.columns}
-::: {.column width="58%"}
-![](img/easp/diagram_moderation_path.png){width=100%}
-:::
+![](img/easp/diagram_moderation_path.png){fig-align="center" width=55%}
 
-::: {.column width="42%"}
 - **a** → observed effect heterogeneity
 - **b** → differences in construct validity of X between contexts
 - **c** → conceptually relevant moderators associated w/context
@@ -171,8 +177,6 @@ Each radar axis indexes one FACE moderator:
 - **e** → context-dependent (un)reliability
 
 [*from Gollwitzer & Schwabe (2022)*]{.text-small}
-:::
-::::
 
 ## {.section-slide}
 <!-- Zwischentitelfolie 03 -->
@@ -191,6 +195,8 @@ Testing the Role of Contextual Variation
 Examined the role of “conceptually relevant” and “conceptually irrelevant” contextual variables (Gollwitzer & Schwabe, 2022) by reanalyzing data from past multi-lab replications.
 :::
 
+::: {.incremental}
+
 - We searched the FORRT Replication Database (FReD) through 17.12.2025 and reviewed ongoing Psychological Science Accelerator (PSA) projects.
 - 384 effect sizes were coded across 44 multi-site replication projects.
 - We applied four inclusion criteria:
@@ -200,9 +206,13 @@ Examined the role of “conceptually relevant” and “conceptually irrelevant�
   4. A comparison single-lab study (the original, or a pre-registered single-site replication) must be available as the reference group for DIF analysis.
 - Only one effect, Shnabel & Nadler (2008), Study 4, fulfilled all of these criteria.
 
+:::
+
 ## Reanalysis of Shnabel & Nadler (2008), Study 4 data {.smaller}
 
 > Victims are more likely to reconcile if they feel empowered, while perpetrators are more likely to do so if they feel accepted.
+
+::: {.incremental}
 
 - We decomposed the interaction effect into two contrasts: effects for **victims** and effects for **perpetrators**.
 - We used RP:P data as a reference, and ML5 (*k* = 8, all US samples) as test data.
@@ -213,9 +223,11 @@ Examined the role of “conceptually relevant” and “conceptually irrelevant�
   - **e** = absolute differences of marginal reliability (ρ)
 - **ML5 finding:** the focal interaction effect was significant only among participants who were given the modified vignette (Baranski et al., 2020).
 
+:::
+
 ## Results: Victims effect {.smaller}
 
-![](img/easp/forest_victims.png){width=58%}
+![](img/easp/forest_victims.png){fig-align="center" width=60%}
 
 - Heterogeneity was low (τ² = 0.0025, I² = 5.15%).
 - Conceptually-relevant (protocol types) and conceptually-irrelevant context (b, d, and e) failed to explain heterogeneity.
@@ -223,7 +235,7 @@ Examined the role of “conceptually relevant” and “conceptually irrelevant�
 
 ## Results: Perpetrators effect {.smaller}
 
-![](img/easp/forest_perpetrators.png){width=46%}
+![](img/easp/forest_perpetrators.png){fig-align="center" width=55%}
 
 - Heterogeneity was moderate (τ² = 0.0162, I² = 25.67%).
 - Only protocol type was significant and explained the entire heterogeneity in the model.
@@ -249,17 +261,21 @@ What effect size heterogeneity in many-labs replications can — and cannot — 
 
 ::: {.closing-left}
 ::: {.closing-contact-box}
-**Dr. Rizqy Amelia Zein**
+**Dr. Rizqy Amelia Zein**\
 Center for Advanced Internet Studies (CAIS) & Universitas Airlangga\
-amelia.zein@cais-research.de 
+E-mail: [amelia.zein@cais-research.de](mailto:amelia.zein@cais-research.de) · Homepage: [rameliaz.github.io](https://rameliaz.github.io/)
+:::
 
+::: {.closing-contact-box}
 **Prof. Dr. Mario Gollwitzer**\
 LMU München, Department of Psychology\
-mario.gollwitzer@lmu.de · www.psy.lmu.de/soz
+E-mail: [mario.gollwitzer@lmu.de](mailto:mario.gollwitzer@lmu.de) · Homepage: [www.psy.lmu.de/soz](www.psy.lmu.de/soz)
 :::
 
 ::: {.closing-cais-logo}
 ![](img/Transparent.png)
+
+![](img/lmu.png)
 :::
 :::
 

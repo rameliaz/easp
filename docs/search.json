@@ -32,14 +32,14 @@
     "href": "easp2026.html#empirical-i.e.-evidence-based-metascience-2",
     "title": "The Role of Context in Explaining Effect Size Heterogeneity in Replication Studies",
     "section": "Empirical (i.e., Evidence-Based) Metascience",
-    "text": "Empirical (i.e., Evidence-Based) Metascience\n\nEmpirical metascience shows that…\n\n\n\n\nquestionable research practices can only explain a small part of non-replicability (e.g., Ulrich & Miller, 2020; Wegener, Pek, & Fabrigar, 2024)\nmaking ad-hoc changes to self-report scales (e.g., excluding items, changing wording, changing response format etc.) has only a small impact on the replicability of the focal finding (Böhm & Wetzel, forthcoming)\nmany pre-registrations are of low quality (Hahn et al., in press) and deviations from the pre-registered analysis plan is the rule (rather than the exception; see Van den Akker et al., 2024)\nmore and more datasets are now publicly accessible on repositories, but only a tiny fraction of data is actually re-usable (see Crüwell et al., 2023; Hardwicke et al., 2021), which explains why data are not really re-used (see Blask et al., 2021; Tenopir et al., 2020)\n\n\n\nPoints 1–2 challenge assumptions about causes; points 3–4 challenge assumptions about effects."
+    "text": "Empirical (i.e., Evidence-Based) Metascience\n\nEmpirical metascience shows that…\n\n\n\n\n\nquestionable research practices can only explain a small part of non-replicability (e.g., Ulrich & Miller, 2020; Wegener, Pek, & Fabrigar, 2024)\nmaking ad-hoc changes to self-report scales (e.g., excluding items, changing wording, changing response format etc.) has only a small impact on the replicability of the focal finding (Böhm & Wetzel, forthcoming)\n\n \n\nmany pre-registrations are of low quality (Hahn et al., in press) and deviations from the pre-registered analysis plan is the rule (rather than the exception; see Van den Akker et al., 2024)\nmore and more datasets are now publicly accessible on repositories, but only a tiny fraction of data is actually re-usable (see Crüwell et al., 2023; Hardwicke et al., 2021), which explains why data are not really re-used (see Blask et al., 2021; Tenopir et al., 2020)\n\n\n\nPoints 1–2 challenge assumptions about causes; points 3–4 challenge assumptions about effects."
   },
   {
     "objectID": "easp2026.html#data-peeking-and-replication-rate",
     "href": "easp2026.html#data-peeking-and-replication-rate",
     "title": "The Role of Context in Explaining Effect Size Heterogeneity in Replication Studies",
     "section": "Data Peeking and Replication Rate",
-    "text": "Data Peeking and Replication Rate\n\nfrom Ulrich & Miller (2020): influence of data peeking (i.e., checking whether a finding is significant after sampling 10 additional participants) on Replication Rate (RR; the relative frequency of obtaining a significant finding in a replication if the original finding had been significant at α = 5% / 0.5%) depending on the max. no. of data peeks (k), population effect size (d), and the base rate of H1 being true (π). Simulation result: the influence of data peeking on RR is negligible in comparison to π and d."
+    "text": "Data Peeking and Replication Rate\n\n\n\n\n\nfrom Ulrich & Miller (2020): influence of data peeking (i.e., checking whether a finding is significant after sampling 10 additional participants) on Replication Rate (RR; the relative frequency of obtaining a significant finding in a replication if the original finding had been significant at α = 5% / 0.5%) depending on the max. no. of data peeks (k), population effect size (d), and the base rate of H1 being true (π). Simulation result: the influence of data peeking on RR is negligible in comparison to π and d."
   },
   {
     "objectID": "easp2026.html#empirical-i.e.-evidence-based-metascience-3",
@@ -60,28 +60,28 @@
     "href": "easp2026.html#context-characteristics-the-manylabs-1-example",
     "title": "The Role of Context in Explaining Effect Size Heterogeneity in Replication Studies",
     "section": "Context Characteristics: the ManyLabs 1 Example",
-    "text": "Context Characteristics: the ManyLabs 1 Example\n\nManyLabs 1 Project (Klein et al., 2014)"
+    "text": "Context Characteristics: the ManyLabs 1 Example\n\n\n\n\n\nManyLabs 1 Project (Klein et al., 2014)"
   },
   {
     "objectID": "easp2026.html#context-characteristics",
     "href": "easp2026.html#context-characteristics",
     "title": "The Role of Context in Explaining Effect Size Heterogeneity in Replication Studies",
     "section": "Context Characteristics",
-    "text": "Context Characteristics\n\nThe “FACE” framework: which sample characteristics moderate replication of classic effects?\n\n\n\nPanels: 11 samples (e.g., ad-hoc student sample; MTurkers, Prolific workers, etc.)\nFACE moderators: Fluid Intelligence (e.g., numeracy), Attentiveness, Crystallized Intelligence (e.g., knowledge, life experience), Experience with online surveys\nEffects tested: four famous effects in econ/social psych — default (opt-out/in), framing, less-is-better, sunk costs\n\nfrom Krefeld-Schwalb et al. (2024)"
+    "text": "Context Characteristics\n\nThe “FACE” framework: which sample characteristics moderate replication of classic effects?\n\n\n\n\n\n\n\nPanels: 11 samples (e.g., ad-hoc student sample; MTurkers, Prolific workers, etc.)\nFACE moderators: Fluid Intelligence (e.g., numeracy), Attentiveness, Crystallized Intelligence (e.g., knowledge, life experience), Experience with online surveys\nEffects tested: four famous effects in econ/social psych — default (opt-out/in), framing, less-is-better, sunk costs\n\nfrom Krefeld-Schwalb et al. (2024)"
   },
   {
     "objectID": "easp2026.html#context-characteristics-1",
     "href": "easp2026.html#context-characteristics-1",
     "title": "The Role of Context in Explaining Effect Size Heterogeneity in Replication Studies",
     "section": "Context Characteristics",
-    "text": "Context Characteristics\n\nfrom Krefeld-Schwalb et al. (2024)"
+    "text": "Context Characteristics\n\n\n\n\n\nfrom Krefeld-Schwalb et al. (2024)"
   },
   {
     "objectID": "easp2026.html#context-characteristics-2",
     "href": "easp2026.html#context-characteristics-2",
     "title": "The Role of Context in Explaining Effect Size Heterogeneity in Replication Studies",
     "section": "Context Characteristics",
-    "text": "Context Characteristics\n\n\n\n\nSamples vary considerably with regard to the “FACE” parameters:\nMTurkers are …\n\nLow in Attentiveness\nHigh in Crystallized Intelligence\nHigh in Experience\n\nStudents are …\n\nHigh in Attentiveness\nLow in Crystallized Intelligence\nLow in Experience\n\nfrom Krefeld-Schwalb et al. (2024)"
+    "text": "Context Characteristics\n\n\n\n\n\n\n\n\nSamples vary considerably with regard to the “FACE” parameters:\nMTurkers are …\n\nLow in Attentiveness\nHigh in Crystallized Intelligence\nHigh in Experience\n\nStudents are …\n\nHigh in Attentiveness\nLow in Crystallized Intelligence\nLow in Experience\n\nfrom Krefeld-Schwalb et al. (2024)"
   },
   {
     "objectID": "easp2026.html#context-characteristics-3",
@@ -95,7 +95,7 @@
     "href": "easp2026.html#conceptually-relevant-vs.-irrelevant-context",
     "title": "The Role of Context in Explaining Effect Size Heterogeneity in Replication Studies",
     "section": "Conceptually Relevant vs. Irrelevant Context",
-    "text": "Conceptually Relevant vs. Irrelevant Context\n\n\n\n\n\na → observed effect heterogeneity\nb → differences in construct validity of X between contexts\nc → conceptually relevant moderators associated w/context\nd → differences in construct validity of Y between contexts\ne → context-dependent (un)reliability\n\nfrom Gollwitzer & Schwabe (2022)"
+    "text": "Conceptually Relevant vs. Irrelevant Context\n\n\n\n\n\n\na → observed effect heterogeneity\nb → differences in construct validity of X between contexts\nc → conceptually relevant moderators associated w/context\nd → differences in construct validity of Y between contexts\ne → context-dependent (un)reliability\n\nfrom Gollwitzer & Schwabe (2022)"
   },
   {
     "objectID": "easp2026.html#section-2",
@@ -123,14 +123,14 @@
     "href": "easp2026.html#results-victims-effect",
     "title": "The Role of Context in Explaining Effect Size Heterogeneity in Replication Studies",
     "section": "Results: Victims effect",
-    "text": "Results: Victims effect\n\n\nHeterogeneity was low (τ² = 0.0025, I² = 5.15%).\nConceptually-relevant (protocol types) and conceptually-irrelevant context (b, d, and e) failed to explain heterogeneity.\nRegardless of any contextual variables, we failed to detect the victims effect."
+    "text": "Results: Victims effect\n\n\n\n\n\n\nHeterogeneity was low (τ² = 0.0025, I² = 5.15%).\nConceptually-relevant (protocol types) and conceptually-irrelevant context (b, d, and e) failed to explain heterogeneity.\nRegardless of any contextual variables, we failed to detect the victims effect."
   },
   {
     "objectID": "easp2026.html#results-perpetrators-effect",
     "href": "easp2026.html#results-perpetrators-effect",
     "title": "The Role of Context in Explaining Effect Size Heterogeneity in Replication Studies",
     "section": "Results: Perpetrators effect",
-    "text": "Results: Perpetrators effect\n\n\nHeterogeneity was moderate (τ² = 0.0162, I² = 25.67%).\nOnly protocol type was significant and explained the entire heterogeneity in the model.\nML5 samples using the “original” protocol yielded more heterogeneous ES, while ES from the “modified” protocol were consistently positive.\nThe perpetrator effect was small and positive only among participants given the modified protocol."
+    "text": "Results: Perpetrators effect\n\n\n\n\n\n\nHeterogeneity was moderate (τ² = 0.0162, I² = 25.67%).\nOnly protocol type was significant and explained the entire heterogeneity in the model.\nML5 samples using the “original” protocol yielded more heterogeneous ES, while ES from the “modified” protocol were consistently positive.\nThe perpetrator effect was small and positive only among participants given the modified protocol."
   },
   {
     "objectID": "easp2026.html#conclusion-limitations",
@@ -144,7 +144,7 @@
     "href": "easp2026.html#section-3",
     "title": "The Role of Context in Explaining Effect Size Heterogeneity in Replication Studies",
     "section": "",
-    "text": "Dr. Rizqy Amelia Zein Center for Advanced Internet Studies (CAIS) & Universitas Airlangga\namelia.zein@cais-research.de\nProf. Dr. Mario Gollwitzer\nLMU München, Department of Psychology\nmario.gollwitzer@lmu.de · www.psy.lmu.de/soz\n\n\n\n\n\n\n\nThank you!\n\n\n\nCenter for Advanced Internet Studies (CAIS) gGmbH\nKonrad-Zuse-Str. 2a, 44801 Bochum\n\n\ninfo@cais-research.de\n+49 234 9531 5000\nwww.cais-research.de"
+    "text": "Dr. Rizqy Amelia Zein\nCenter for Advanced Internet Studies (CAIS) & Universitas Airlangga\nE-mail: amelia.zein@cais-research.de · Homepage: rameliaz.github.io\n\n\nProf. Dr. Mario Gollwitzer\nLMU München, Department of Psychology\nE-mail: mario.gollwitzer@lmu.de · Homepage: www.psy.lmu.de/soz\n\n\n\n\n\n\n\n\nThank you!\n\n\n\nCenter for Advanced Internet Studies (CAIS) gGmbH\nKonrad-Zuse-Str. 2a, 44801 Bochum\n\n\ninfo@cais-research.de\n+49 234 9531 5000\nwww.cais-research.de"
   },
   {
     "objectID": "easp2026.html#appendix-descriptive-statistics",
