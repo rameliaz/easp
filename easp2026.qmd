@@ -225,7 +225,7 @@ Examined the role of “conceptually relevant” and “conceptually irrelevant�
 
 ## Results: Perpetrators effect
 
-![](img/easp/forest_perpetrators.png){fig-align="center" width=50%}
+![](img/easp/forest_perpetrators.png){fig-align="center" width=40%}
 
 - Heterogeneity was moderate (τ² = 0.0162, I² = 25.67%).
 - Only protocol type was significant and explained the entire heterogeneity in the model.
